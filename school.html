@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>各校資管系所</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="school.css">
+</head>
+<body class="school-page-body">
+
+    <div id="header-container"></div>
+
+    <header class="page-header">
+        <h1>各校資管系所</h1>
+    </header>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="search-box">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="輸入學校或系所名稱搜尋...">
+            </div>
+
+            <div class="filter-pills">
+                <button class="pill-btn active">全部地區</button>
+                <button class="pill-btn">北區</button>
+                <button class="pill-btn">中區</button>
+                <button class="pill-btn">南區</button>
+                <button class="pill-btn">東部及離島</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="school-main">
+        <div id="schoolContainer" class="school-grid">
+            <!-- 學校卡片將由 school.js 動態生成 -->
+        </div>
+
+        <div class="pagination-container">
+            <div id="paginationContainer" class="pagination">
+                <!-- 分頁按鈕將由 school.js 動態生成 -->
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="nav.js"></script>
+    <script src="school.js"></script>
+</body>
+</html>

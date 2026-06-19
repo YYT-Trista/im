@@ -1,0 +1,149 @@
+/* signin.css */
+
+/* 1. 基礎重置 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #f8fafc; /* 給一點極淺的底色，才不會跟白色的登入框融在一起 */
+}
+
+/* 2. 左右分欄的大盒子 */
+.split-container {
+    display: flex;
+    height: 100vh; 
+}
+
+/* 3. 左半邊：圖片區 */
+.leftbox {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.leftbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* 4. 右半邊：登入表單區 */
+.rightbox {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    position: relative; /* 為了讓返回按鈕可以絕對定位 */
+}
+
+/* 返回首頁按鈕 (固定在右半部的左上角) */
+.back-btn {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: #64748b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-btn:hover {
+    color: #2563eb;
+}
+
+/* 🌟 靈魂核心：現代感登入卡片 */
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px; /* 限制最大寬度，看起來比較精緻 */
+    border-radius: 24px; /* 更圓潤的邊角 */
+    padding: 50px 40px;
+    /* 柔和的多層次陰影，取代原本死板的 border */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+.login-card img {
+    width: 110px;
+    margin-bottom: 20px;
+}
+
+.login-card h2 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.login-card p.subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 35px;
+}
+
+/* 表單內部排版 */
+form {
+    text-align: left; /* 文字靠左，符合現代習慣 */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    color: #475569;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* 基本樣式 */
+input {
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 14px 16px;
+    font-size: 15px;
+    border-radius: 12px;
+    border: 1.5px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: #1e293b;
+    outline: none; /* 去除點擊時瀏覽器預設的醜醜黑框 */
+    transition: all 0.3s ease;
+}
+
+/* 簡單的 hover (滑鼠碰到) 與 focus (點擊打字) 效果 */
+input:hover,
+input:focus {
+    border-color: #2563eb; /* 邊框變成科技藍 */
+    background-color: #ffffff; /* 底色變成純白 */
+}
+
+/* 登入按鈕 */
+.button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* 登入按鈕的 Hover 效果 (簡單版) */
+.button:hover {
+    background-color: #ffffff; /* 滑鼠碰到時顏色變深 */
+    color: #2563eb;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35); /* 陰影稍微加深，增加立體感 */
+    /* 已經把 transform: translateY(-2px); 刪除了，所以不會再移動 */
+}
