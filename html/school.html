@@ -1,56 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>各校資管系所</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="icon" type="image/x-icon" href="../image/CSIM.png">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/school.css">
-</head>
-<body class="school-page-body">
-
+    <link rel="icon" type="image/x-icon" href="../image/CSIM.png" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/school.css" />
+  </head>
+  <body class="school-page-body">
     <div id="header-container"></div>
 
     <header class="page-header">
-        <h1>各校資管系所</h1>
+      <h1>各校資管系所</h1>
     </header>
 
     <section class="filter-section">
-        <div class="filter-container">
-            <div class="search-box">
-                <i class="fa-solid fa-search"></i>
-                <input type="text" id="searchInput" placeholder="輸入學校或系所名稱搜尋...">
-            </div>
-
-            <div class="filter-pills">
-                <button class="pill-btn active">全部地區</button>
-                <button class="pill-btn">北區</button>
-                <button class="pill-btn">中區</button>
-                <button class="pill-btn">南區</button>
-                <button class="pill-btn">東部及離島</button>
-            </div>
+      <div class="filter-container">
+        <div class="search-box">
+          <i class="fa-solid fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="輸入學校或系所名稱搜尋..."
+          />
         </div>
+
+        <div class="filter-pills">
+          <button class="pill-btn active">全部地區</button>
+          <button class="pill-btn">北區</button>
+          <button class="pill-btn">中區</button>
+          <button class="pill-btn">南區</button>
+          <button class="pill-btn">東部及離島</button>
+        </div>
+      </div>
     </section>
 
     <main class="school-main">
-        <div id="schoolContainer" class="school-grid"> <!--每個學校的卡片js會控制-->
-        </div>
+      <div id="schoolContainer" class="school-grid">
+        <!--每個學校的卡片js會控制-->
+      </div>
 
-        <div class="pagination-container">
-            <div id="paginationContainer" class="pagination"> <!-- 分頁也由js控制 -->
-            </div>
+      <div class="pagination-container">
+        <div id="paginationContainer" class="pagination">
+          <!-- 分頁也由js控制 -->
         </div>
+      </div>
     </main>
 
     <div id="footer-container"></div>
 
     <script src="../js/nav.js"></script>
     <script src="../js/school.js"></script>
-</body>
+  </body>
 </html>

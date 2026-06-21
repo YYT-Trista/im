@@ -1,22 +1,55 @@
-<!DOCTYPE html>
-<html lang="zh-Hant-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中華民國資訊管理學會 CSIM</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="image/CSIM.png">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>中華民國資訊管理學會</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" type="image/x-icon" href="image/CSIM.png" />
+    <link rel="stylesheet" href="css/123.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+  </head>
+  <body>
     <div id="header-container"></div>
-
-    
+    <div class="container">
+      <section class="block">
+        <h2>最新消息</h2>
+        <div class="filter-tabs">
+          <button class="filter-btn active" onclick="filterNews('all', this)">
+            全部
+          </button>
+          <button class="filter-btn" onclick="filterNews('學會', this)">
+            資訊管理學會
+          </button>
+          <button class="filter-btn" onclick="filterNews('學校', this)">
+            學校
+          </button>
+          <button class="filter-btn" onclick="filterNews('業界', this)">
+            業界
+          </button>
+        </div>
+        <div id="news-grid"></div>
+        <ul id="pager" class="pager"></ul>
+      </section>
+      <section class="block">
+        <h2>活動花絮</h2>
+        <div class="gallery-container">
+          <div class="gallery-wrapper">
+            <div class="gallery-track" id="gallery-carousel"></div>
+          </div>
+          <button class="gallery-nav gallery-prev" onclick="moveGallery(-1)">
+            ❮
+          </button>
+          <button class="gallery-nav gallery-next" onclick="moveGallery(1)">
+            ❯
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="js/abc.js"></script>
     <div id="footer-container"></div>
-    
     <script src="js/nav.js"></script>
-</body>
+  </body>
 </html>

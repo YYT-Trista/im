@@ -14,10 +14,10 @@ const csim114Path = isIn114Folder
 // header
 const headerHTML = `
     <header class="site-header">
-        <div class="brand-container">
+        <a href="${rootPath}index.html" class="brand-container" style="text-decoration: none; color: inherit;">
             <img src="${rootPath}image/CSIM.png" alt="CSIM" class="brand-logo"> 
             <h1 class="brand-name">中華民國資訊管理學會</h1>
-        </div>
+        </a>
 
         <nav class="nav-menu">
             <a href="${rootPath}index.html" class="nav-item ">首頁</a>

@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Global Reset & Typography
-   ========================================================================== */
 html,
 body {
   font-family: "Noto Sans TC", sans-serif;
@@ -16,7 +13,7 @@ a {
   transition: color 0.2s ease-in-out;
 }
 
-a:hover {
+a:hover { /* 碰到連結變紅色的 */
   color: #b81007;
 }
 
@@ -26,9 +23,6 @@ table {
   width: 100%;
 }
 
-/* ==========================================================================
-   Layout Containers
-   ========================================================================== */
 #topbar {
   display: none;
 }
@@ -47,7 +41,7 @@ table {
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* 響應式 */
   #wrap {
     padding: 20px;
     margin: 20px auto;
@@ -69,9 +63,8 @@ table {
   }
 }
 
-/* ==========================================================================
-   Typography & Headings
-   ========================================================================== */
+/* 表格部分 */
+
 .page-title {
   font-size: 28px;
   font-weight: 700;
@@ -81,9 +74,7 @@ table {
   line-height: 1.2;
 }
 
-/* ==========================================================================
-   Conference & Papers Table
-   ========================================================================== */
+
 .views-table {
   width: 100%;
   margin-top: 24px;
@@ -120,7 +111,7 @@ table {
   font-weight: 500;
 }
 
-/* 避免特定欄位換行以節省空間 */
+
 .views-table td.views-field-field-ap-field,
 .views-table th.views-field-field-ap-field,
 .views-table td.views-field-field-author,
@@ -135,7 +126,7 @@ table {
   text-align: center;
 }
 
-/* Table Quick View Link */
+
 .conf-quick-link {
   display: inline-flex;
   background-color: #eff6ff;
@@ -157,9 +148,7 @@ table {
   vertical-align: middle;
 }
 
-/* ==========================================================================
-   Exposed Filters Form (Search & Select)
-   ========================================================================== */
+/* 搜尋論文的部分 */
 .view-filters {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -228,9 +217,7 @@ table {
   box-shadow: 0 0 0 1px #2563eb;
 }
 
-/* ==========================================================================
-   Modal Dialog Styling
-   ========================================================================== */
+/* 彈出視窗的設計 */
 .modal-overlay {
   display: flex;
   visibility: hidden;
@@ -247,8 +234,8 @@ table {
   justify-content: center;
   opacity: 0;
   transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+    opacity 0.01s ease,
+    visibility 0.01s ease;
 }
 
 .modal-overlay.active {
@@ -360,9 +347,7 @@ table {
   text-align: justify;
 }
 
-/* ==========================================================================
-   Reset Button Styling
-   ========================================================================== */
+/* 重設按鈕設計 */
 .reset-btn {
   height: 42px;
   padding: 0 24px;
