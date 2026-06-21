@@ -1,9 +1,15 @@
-// 自動偵測路徑深度 
+// 自動偵測路徑深度
 // 因為我的index獨立在資料夾最外層 但我是用js的方式顯示到覽頁 這樣在每個地方點的連結路徑會不一樣 所以要用這個
 // 下面的${rootPath} 這種都是為了可以應變路徑
-const isInHtmlFolder = window.location.pathname.includes('/html/');
-const rootPath = isInHtmlFolder ? '../' : '';
-const htmlPath = isInHtmlFolder ? '' : 'html/';
+const isInHtmlFolder = window.location.pathname.includes("/html/");
+const isIn114Folder = window.location.pathname.includes("/114-2 資管學會/");
+const rootPath = isInHtmlFolder || isIn114Folder ? "../" : "";
+const htmlPath = isIn114Folder ? "../html/" : isInHtmlFolder ? "" : "html/";
+const csim114Path = isIn114Folder
+  ? ""
+  : isInHtmlFolder
+    ? "../114-2 資管學會/"
+    : "114-2 資管學會/";
 
 // header
 const headerHTML = `
@@ -31,7 +37,9 @@ const headerHTML = `
             </div>
         
             <a href="${htmlPath}school.html" class="nav-item ">各校資管系所</a>
-            <a href="#" class="nav-item ">研討會與論文</a>
+            <a href="${htmlPath}newconference.html" class="nav-item "
+              >研討會與論文</a
+            >
         </nav>
 
         <!-- 右側：功能按鈕區塊 -->
@@ -95,5 +103,5 @@ const footerHTML = `
     </footer>
 `;
 
-document.getElementById('header-container').innerHTML = headerHTML;
-document.getElementById('footer-container').innerHTML = footerHTML;
+document.getElementById("header-container").innerHTML = headerHTML;
+document.getElementById("footer-container").innerHTML = footerHTML;
