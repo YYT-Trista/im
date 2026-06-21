@@ -1,43 +1,47 @@
-// components.js
+// 自動偵測路徑深度 
+// 因為我的index獨立在資料夾最外層 但我是用js的方式顯示到覽頁 這樣在每個地方點的連結路徑會不一樣 所以要用這個
+// 下面的${rootPath} 這種都是為了可以應變路徑
+const isInHtmlFolder = window.location.pathname.includes('/html/');
+const rootPath = isInHtmlFolder ? '../' : '';
+const htmlPath = isInHtmlFolder ? '' : 'html/';
 
-// 準備 Header 的內容 (只留下 class)
+// header
 const headerHTML = `
     <header class="site-header">
         <div class="brand-container">
-            <img src="CSIM.png" alt="CSIM" class="brand-logo">
+            <img src="${rootPath}image/CSIM.png" alt="CSIM" class="brand-logo"> 
             <h1 class="brand-name">中華民國資訊管理學會</h1>
         </div>
 
         <nav class="nav-menu">
-            <a href="about.html" class="nav-item ">首頁</a>
+            <a href="${rootPath}index.html" class="nav-item ">首頁</a>
             <div class="nav-dropdown">
-                <a href="about.html" class="nav-item">
+                <a href="#" class="nav-item">
                     關於學會 <i class="fa-solid fa-angle-down dropdown-icon"></i>
                 </a>
     
                 <div class="dropdown-menu">
-                    <a href="#">學會簡介</a>
-                    <a href="#">組織章程</a>
-                    <a href="#">學會組織</a>
-                    <a href="#">理監事</a>
-                    <a href="#">申請入會</a>
-                    <a href="#">會議記錄</a>
+                    <a href="${htmlPath}csim_intro.html">學會簡介</a>
+                    <a href="${htmlPath}csim_article.html">組織章程</a>
+                    <a href="${htmlPath}csim_org.html">學會組織</a>
+                    <a href="${htmlPath}csim_dir.html">理監事</a>
+                    <a href="${htmlPath}csim_apply.html">申請入會</a>
+                    <a href="${htmlPath}csim_record.html">會議記錄</a>
                 </div>
             </div>
         
-            <a href="school.html" class="nav-item ">各校資管系所</a>
-            <a href="research.html" class="nav-item ">研討會與論文</a>
+            <a href="${htmlPath}school.html" class="nav-item ">各校資管系所</a>
+            <a href="#" class="nav-item ">研討會與論文</a>
         </nav>
 
         <!-- 右側：功能按鈕區塊 -->
         <div class="nav-actions signin">
-            <a href="signin.html" class="action-register">會員登入</a>
+            <a href="${htmlPath}signin.html" class="action-signin">會員登入</a>
         </div>
     </header>
 `;
 
-// 準備 Footer 的內容 (只留下 class)
-// 準備 Footer 的內容 (進階質感版)
+// footer
 const footerHTML = `
     <footer class="custom-footer">
         <div class="footer-container">
@@ -91,6 +95,5 @@ const footerHTML = `
     </footer>
 `;
 
-// 把內容塞進網頁對應的 ID 盒子裡
 document.getElementById('header-container').innerHTML = headerHTML;
 document.getElementById('footer-container').innerHTML = footerHTML;

@@ -1,12 +1,8 @@
-/* =========================================
-   各校資管系所 專屬樣式 (school_style.css)
-   ========================================= */
-
-/* --- 頁面共用設定 --- */
 html {
     height: 100%;
 }
 
+/* 頁面主要容器 */
 .school-page-body {
     background-color: #ffffff;
     color: #1f2937;
@@ -16,7 +12,6 @@ html {
     min-height: 100%;
 }
 
-/* --- 頂部大標題區塊 --- */
 .page-header {
     background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
@@ -38,13 +33,12 @@ html {
     margin: 0 auto;
 }
 
-/* --- 搜尋與篩選區塊 --- */
-.filter-section {
+.filter-section { /* 搜尋篩選的部分 */
     background-color: #ffffff;
     padding: 20px;
     border-bottom: 1px solid #f4f5f7;
     position: sticky;
-    top: 75px; /* 根據你的 Header 高度微調 */
+    top: 75px; 
     z-index: 40;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
@@ -57,7 +51,7 @@ html {
     gap: 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { /* 響應式排版*/
     .filter-container {
         flex-direction: row;
         justify-content: space-between;
@@ -65,8 +59,7 @@ html {
     }
 }
 
-/* 搜尋框 */
-.search-box {
+.search-box { /* 搜尋框的部分 */
     position: relative;
     width: 100%;
     max-width: 400px;
@@ -96,13 +89,12 @@ html {
     box-shadow: 0 0 0 1px #2563eb;
 }
 
-/* 地區篩選按鈕 */
-.filter-pills {
+.filter-pills { /*地區篩選按鈕*/
     display: flex;
     gap: 8px;
     overflow-x: auto;
     white-space: nowrap;
-    padding-bottom: 4px; /* 留空間給捲軸 */
+    padding-bottom: 4px; 
 }
 
 .pill-btn {
@@ -128,8 +120,7 @@ html {
     font-weight: 700;
 }
 
-/* --- 學校卡片網格 (Grid) --- */
-.school-main {
+.school-main { /*很多學校卡片的排版*/
     flex-grow: 1;
     padding: 40px 20px;
     max-width: 1200px;
@@ -144,13 +135,12 @@ html {
     gap: 24px;
 }
 
-/* 響應式排版：根據螢幕寬度決定一行放幾張卡片 */
+/* 響應式設計 */
 @media (min-width: 768px) { .school-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .school-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1280px) { .school-grid { grid-template-columns: repeat(4, 1fr); } }
 
-/* --- 獨立的卡片設計 --- */
-.school-card {
+.school-card { /* 每個卡片的設計 */
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 16px;
@@ -262,8 +252,7 @@ html {
     color: #111827;
 }
 
-/* --- 分頁導覽列 --- */
-.pagination-container {
+.pagination-container { /* 下面選頁碼的地方 */
     margin-top: 48px;
     display: flex;
     justify-content: center;
@@ -283,7 +272,7 @@ html {
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    margin-left: -1px; /* 讓邊框重疊 */
+    margin-left: -1px;  /* 邊框重疊 */
 }
 
 .page-item:hover {

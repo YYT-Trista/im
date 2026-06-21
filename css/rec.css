@@ -1,0 +1,84 @@
+
+body {
+    background-color: #f8fafc;
+    font-family: "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    color: #334155;
+    margin: 0;
+}
+
+.page_intro h1 {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 0 30px 0;
+    background-color: #ffffff;
+    font-size: 36px;
+    border-bottom: 1px solid #e2e8f0;
+    letter-spacing: 3px;
+    border-radius: 12px;
+}
+
+.flex {
+    display: flex;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.flex > div {
+    flex: 1; 
+}
+
+
+
+.block {
+    background: #ffffff;
+    padding: 10px 30px;
+    margin: 40px 140px 30px 140px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+    font-size: 15px;
+}
+
+
+.view-content .views-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 12px 8px;
+    border-bottom: 1px dashed #e2e8f0; 
+    transition: background-color 0.2s ease;
+}
+
+
+.view-content .views-row:hover {
+    background-color: #f8fafc;
+}
+
+
+.view-content .views-row:last-child {
+    border-bottom: none;
+}
+
+
+.views-field-title a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.views-field-title a:hover {
+    text-decoration: underline; 
+}
+
+
+
+.views-field-created {
+    color: #64748b; 
+    font-size: 14px;
+    white-space: nowrap; 
+    margin-left: 20px;
+}
+
+
+

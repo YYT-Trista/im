@@ -6,11 +6,12 @@
     <title>各校資管系所</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="icon" type="image/x-icon" href="CSIM.png">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="school.css">
+    <link rel="icon" type="image/x-icon" href="../image/CSIM.png">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/school.css">
 </head>
 <body class="school-page-body">
 
@@ -38,20 +39,18 @@
     </section>
 
     <main class="school-main">
-        <div id="schoolContainer" class="school-grid">
-            <!-- 學校卡片將由 school.js 動態生成 -->
+        <div id="schoolContainer" class="school-grid"> <!--每個學校的卡片js會控制-->
         </div>
 
         <div class="pagination-container">
-            <div id="paginationContainer" class="pagination">
-                <!-- 分頁按鈕將由 school.js 動態生成 -->
+            <div id="paginationContainer" class="pagination"> <!-- 分頁也由js控制 -->
             </div>
         </div>
     </main>
 
     <div id="footer-container"></div>
 
-    <script src="nav.js"></script>
-    <script src="school.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/school.js"></script>
 </body>
 </html>

@@ -1,8 +1,5 @@
-// school.js
-
-// 1. 建立學校資料庫 (共 103 筆資料，包含 region 與 city)
+// 學校資料庫
 const schoolsData = [
-    // --- 來自第一頁的資料 ---
     { name: "樹人醫護管理專校", region: "南區", city: "高雄市", dept: "資訊管理系", director: "楊媚靜", phone: "(07)6979392", website: "https://www.szmc.edu.tw/" },
     { name: "康寧大學(健康數位科技學系)", region: "北區", city: "台北市", dept: "資訊管理系", director: "嚴竹華", phone: "(02)26321181轉280", website: "https://im.ukn.edu.tw/p/404-1028-8392.php?Lang=zh-tw" },
     { name: "環球科技大學(資訊與電子商務管理系)", region: "中區", city: "雲林縣", dept: "資訊管理系", director: "盧盈光", phone: "(05)5370988#4351", website: "" },
@@ -23,8 +20,7 @@ const schoolsData = [
     { name: "僑光科技大學", region: "中區", city: "台中市", dept: "資訊管理系", director: "劉柏伸", phone: "04-27016855 ext 2251", website: "https://imtech.ocu.edu.tw/" },
     { name: "朝陽科技大學", region: "中區", city: "台中市", dept: "資訊管理系", director: "戴紹國", phone: "(04)23323000#7124", website: "https://webim.cyut.edu.tw/" },
     { name: "修平科技大學", region: "中區", city: "台中市", dept: "資訊管理系", director: "王仁澤", phone: "(04)23692135", website: "https://im.hust.edu.tw/" },
-    
-    // --- 來自 PDF 2 的資料 ---
+
     { name: "建國科技大學", region: "中區", city: "彰化縣", dept: "資訊管理系", director: "蘇志青", phone: "(04)7111111#3600", website: "" },
     { name: "南開科技大學", region: "中區", city: "南投縣", dept: "資訊管理系", director: "李孟度", phone: "(049)2563489#2862", website: "https://www.nkut.edu.tw/" },
     { name: "龍華科技大學", region: "北區", city: "桃園市", dept: "資訊管理系", director: "何怡偉", phone: "02-82093211#6318", website: "https://im.lhu.edu.tw/" },
@@ -46,7 +42,6 @@ const schoolsData = [
     { name: "亞東科技大學", region: "北區", city: "新北市", dept: "資訊管理系", director: "陳鵬文", phone: "(02)77388000#5317", website: "https://im.aeust.edu.tw/" },
     { name: "國立台中科技大學", region: "中區", city: "台中市", dept: "資訊管理系", director: "姜琇森", phone: "(04)22196882", website: "https://im.nutc.edu.tw/" },
 
-    // --- 來自 PDF 3 的資料 ---
     { name: "義守大學", region: "南區", city: "高雄市", dept: "資訊管理系", director: "吳有龍", phone: "(07)6577711#6563", website: "https://mis.isu.edu.tw/" },
     { name: "南華大學", region: "南區", city: "嘉義縣", dept: "資訊管理系", director: "張仲瑋", phone: "(05)2721001#2611", website: "http://im3.nhu.edu.tw/" },
     { name: "長榮大學", region: "南區", city: "台南市", dept: "資訊管理系", director: "林穎宏", phone: "(06)2785123#6100、6106", website: "http://dweb.cjcu.edu.tw/im" },
@@ -68,7 +63,6 @@ const schoolsData = [
     { name: "銘傳大學", region: "北區", city: "桃園市", dept: "資訊管理系", director: "林至中", phone: "(03)3507001#3420", website: "https://im.wp.mcu.edu.tw/" },
     { name: "輔仁大學", region: "北區", city: "新北市", dept: "資訊管理系", director: "董惟鳳", phone: "(02)2905-2717", website: "https://www.im.fju.edu.tw/" },
 
-    // --- 來自 PDF 4 的資料 ---
     { name: "實踐大學", region: "北區", city: "台北市", dept: "資訊科技與管理學系", director: "李建國", phone: "(02)25381111#8810/8974", website: "https://itm.usc.edu.tw/" },
     { name: "開南大學", region: "北區", city: "桃園市", dept: "資訊管理系", director: "劉鎮豪", phone: "(03)3412500#3501、7955", website: "https://im.knu.edu.tw/" },
     { name: "華梵大學", region: "北區", city: "新北市", dept: "資訊管理系", director: "林智玲", phone: "(02)2663-2102#4002", website: "https://cole.hfu.edu.tw/main.php" },
@@ -90,7 +84,6 @@ const schoolsData = [
     { name: "國立中央大學", region: "北區", city: "桃園市", dept: "資訊管理系", director: "陳以錚", phone: "(03)4227151#66552", website: "https://im.mgt.ncu.edu.tw/" },
     { name: "育達科技大學", region: "中區", city: "苗栗縣", dept: "資訊管理系", director: "張毓騰", phone: "(037)651188#5520", website: "https://www.ydu.edu.tw/" },
 
-    // --- 來自 PDF 5 的資料 ---
     { name: "玄奘大學", region: "北區", city: "新竹市", dept: "資訊管理系", director: "蔡耀弘", phone: "(03)5302255#1264", website: "http://www.hcu.edu.tw/itd/" },
     { name: "正修科技大學", region: "南區", city: "高雄市", dept: "資訊管理系", director: "夏自立", phone: "(07)7358800#5324", website: "https://mis.csu.edu.tw/" },
     { name: "弘光科技大學", region: "中區", city: "台中市", dept: "資訊管理系", director: "黃建基", phone: "(04)26318652#5401~5403", website: "https://www.hk.edu.tw/" },
@@ -112,36 +105,33 @@ const schoolsData = [
     { name: "中州技術學院", region: "中區", city: "彰化縣", dept: "資訊管理系", director: "廖基堯", phone: "(04)8359000#3201", website: "" },
     { name: "中山醫學大學(醫療產業科技管理學系)", region: "中區", city: "台中市", dept: "醫療資訊管理學系", director: "蔡雅芳", phone: "(04)24730022#12127", website: "https://health.csmu.edu.tw/" },
 
-    // --- 來自 PDF 6 的資料 ---
     { name: "大葉大學", region: "中區", city: "彰化縣", dept: "資訊管理系", director: "陳才", phone: "(04)8511888#3000", website: "https://im.dyu.edu.tw/" },
     { name: "敏實科技大學", region: "北區", city: "新竹縣", dept: "資訊管理系", director: "李培育", phone: "(03)5927700#2751", website: "https://www.mitust.edu.tw/" },
     { name: "大同大學", region: "北區", city: "台北市", dept: "資訊經營系", director: "高有成", phone: "(02) 77364779", website: "https://mis.ttu.edu.tw/" }
 ];
 
-// 預留變數以進行篩選與分頁
+// 分頁篩選
 let currentDisplayData = schoolsData; 
 const itemsPerPage = 20; 
 let currentPage = 1;     
 
-// 目前選擇的篩選條件
+// 篩選條件選擇
 let currentRegion = '全部地區';
 let searchText = '';
 
-// DOM 元素
+
 const container = document.getElementById('schoolContainer');
 const paginationContainer = document.getElementById('paginationContainer');
 const searchInput = document.getElementById('searchInput');
 const pillButtons = document.querySelectorAll('.pill-btn');
 
-// ==========================================
-// 🌟 負責過濾資料的核心函數
-// ==========================================
+// 篩選資料要過濾不是的東西
 function filterData() {
     currentDisplayData = schoolsData.filter(school => {
-        // 1. 地區篩選 (以 schoolsData 設定的 region 屬性為基準)
+        // 篩選地區 在上面的資料庫有寫好每個區域
         const matchesRegion = (currentRegion === '全部地區') || (school.region === currentRegion);
         
-        // 2. 關鍵字篩選 (名稱、縣市、主任、系所、地區)
+        // 篩選關鍵字
         const matchesSearch = school.name.toLowerCase().includes(searchText) || 
                               school.region.toLowerCase().includes(searchText) ||
                               school.city.toLowerCase().includes(searchText) ||
@@ -151,13 +141,11 @@ function filterData() {
         return matchesRegion && matchesSearch;
     });
 
-    currentPage = 1; // 篩選後切回第一頁
+    currentPage = 1; // 篩選完切回第一頁
     renderSchools(currentPage);
 }
 
-// ==========================================
-// 🌟 負責「印出卡片」的函數
-// ==========================================
+// 把很多卡片顯示出來 
 function renderSchools(page) {
     if (!container) return;
     
@@ -168,7 +156,7 @@ function renderSchools(page) {
     let htmlContent = '';
     
     if (pageData.length === 0) {
-        container.innerHTML = '<p style="grid-column: 1/-1; text-align:center; color:#6b7280; padding:40px;">找不到符合的學校，請換個關鍵字或地區試試看！</p>';
+        container.innerHTML = '<p style="grid-column: 1/-1; text-align:center; color:#6b7280; padding:40px;">找不到符合的學校</p>';
         paginationContainer.innerHTML = '';
         return;
     }
@@ -206,9 +194,7 @@ function renderSchools(page) {
     renderPagination();
 }
 
-// ==========================================
-// 🌟 負責「印出分頁按鈕」的函數
-// ==========================================
+// 顯示分頁按紐
 function renderPagination() {
     if (!paginationContainer) return;
     
@@ -234,15 +220,12 @@ function renderPagination() {
     paginationContainer.innerHTML = paginationHTML;
 }
 
-// ==========================================
-// 🌟 點擊按鈕時「切換頁面」的函數
-// ==========================================
+// 點擊切換頁面時會有的情況
 window.changePage = function(newPage, event) {
     if (event) event.preventDefault(); 
     currentPage = newPage;  
     renderSchools(currentPage); 
-    
-    // 平滑滾動到搜尋與篩選列上方
+
     const filterSection = document.querySelector('.filter-section');
     if (filterSection) {
         filterSection.scrollIntoView({ behavior: 'smooth' });
@@ -250,10 +233,6 @@ window.changePage = function(newPage, event) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
-
-// ==========================================
-// 🌟 綁定事件監聽器
-// ==========================================
 
 // 監聽搜尋輸入
 if (searchInput) {
@@ -263,7 +242,7 @@ if (searchInput) {
     });
 }
 
-// 監聽地區按鈕點擊
+// 監聽地區按鈕
 if (pillButtons) {
     pillButtons.forEach(btn => {
         btn.addEventListener('click', function() {
